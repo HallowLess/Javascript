@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var ilgis = 100;
+        alert('kintamojo "ilgis" reikšmė yra ' + ilgis);
+        var plotis = 70;
+        var aukštis = 250;
+        var perimetras = plotis * 2 + aukštis * 2;
+        alert('kintamojo "plotis" reikšmė yra ' + plotis);
+        alert('kintamojo "aukštis" reikšmė yra ' + aukštis);
+        alert('kintamojo "perimetas" reikšmė yra ' + perimetras);
+        var plotas = plotis * aukštis;
+        alert('kintamojo "plotas" reikšmė yra ' + plotas);
+        var įstrižainė = Math.sqrt(Math.pow(plotis, 2) + Math.pow(aukštis, 2));
+        alert('kintamojo "įstrižainė" reikšmė yra ' + įstrižainė);
+    </script>
+</head>
+
+<body>
+    <div>
+        <button type="button" onclick="document.write(ilgis)">ilgis</button>
+        <button type="button" onclick="document.write(plotis)">plotis</button>
+        <button type="button" onclick="document.write(aukštis)">aukštis</button>
+        <button type="button" onclick="document.write(perimetras)">perimetras</button>
+        <button type="button" onclick="document.write(plotas)">plotas</button>
+        <button type="button" onclick="document.write(įstrižainė)">įstrižainė</button>
+    </div>
+</body>
+
+</html>
