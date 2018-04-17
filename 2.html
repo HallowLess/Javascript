@@ -21,19 +21,20 @@
     var plotas = a * b * c;
     var elementas = document.getElementById("a");
     if (a == b, a == c, b == c) {
-        elementas.innerHTML = ("lygiakraštis " + "plotas " + plotas)
+        elementas.innerHTML += (" lygiakraštis " + "plotas " + plotas)
     }
     else if (a == b && c != a || a == c && b != a || c == b && c != a) {
-        elementas.innerHTML = ("lygiašonis " + "plotas " + plotas)
+        elementas.innerHTML += (" lygiašonis " + "plotas " + plotas)
     }
     else if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2) || Math.pow(c, 2) + Math.pow(b, 2) == Math.pow(a, 2) || Math.pow(a, 2) + Math.pow(c, 2) == Math.pow(b, 2)) {
-        elementas.innerHTML = ("status " + "plotas " + plotas)
+        elementas.innerHTML += (" status " + "plotas " + plotas)
     }
     else if (a => 0, b => 0, c => 0) {
-        elementas.innerHTML = ("joks")
+        elementas.innerHTML += (" joks")
     }
     else {
-        elementas.innerHTML = ("įvairiakraštis " + "plotas " + plotas)
+        elementas.innerHTML += (" įvairiakraštis " + "plotas " + plotas)
     }
 </script>
+
 </html>
