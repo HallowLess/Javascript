@@ -6,33 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pratimas</title>
-    <script>
-        var a;
-        a = 3;
-        var b;
-        b = 4;
-        var c;
-        c = 0;
-        if (a == b, a == c, b == c) {
-            alert("lygiakraštis")
-        }
-        else if (a == b && c != a || a == c && b != a || c == b && c != a) {
-            alert("lygiašonis")
-        }
-        else if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2) || Math.pow(c, 2) + Math.pow(b, 2) == Math.pow(a, 2) || Math.pow(a, 2) + Math.pow(c, 2) == Math.pow(b, 2)) {
-            alert("status")
-        }
-        else if (a => 0, b => 0, c => 0) {
-            alert("joks")
-        }
-        else {
-            alert("įvairiakraštis")
-        }
-
-        var plotas = a * b * c;
-    </script>
-
-    <body>
-        <p id="a">trikampis</p>
-    </body>
 </head>
+
+<body>
+    <p id="a">trikampis</p>
+</body>
+<script>
+    var a;
+    a = 4;
+    var b;
+    b = 4;
+    var c;
+    c = 4;
+    var plotas = a * b * c;
+    var elementas = document.getElementById("a");
+    if (a == b, a == c, b == c) {
+        elementas.innerHTML = ("lygiakraštis " + "plotas " + plotas)
+    }
+    else if (a == b && c != a || a == c && b != a || c == b && c != a) {
+        elementas.innerHTML = ("lygiašonis " + "plotas " + plotas)
+    }
+    else if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2) || Math.pow(c, 2) + Math.pow(b, 2) == Math.pow(a, 2) || Math.pow(a, 2) + Math.pow(c, 2) == Math.pow(b, 2)) {
+        elementas.innerHTML = ("status " + "plotas " + plotas)
+    }
+    else if (a => 0, b => 0, c => 0) {
+        elementas.innerHTML = ("joks")
+    }
+    else {
+        elementas.innerHTML = ("įvairiakraštis " + "plotas " + plotas)
+    }
+</script>
+</html>

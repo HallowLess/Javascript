@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>automobiliai</title>
+</head>
+
+<body>
+    <thead>
+        <tr>
+            <th>data</th>
+            <th>automobilio numeriai</th>
+            <th>greitis (km/val)</th>
+        </tr>
+    </thead>
+    <tbody style="width:100%">
+        <tr>
+            <td>
+                <div id="a"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="c"></div>
+            </td>
+        </tr>
+    </tbody>
+</body>
+<script>
+    var elementai = [" 2018 05 19 15:46:45 ", "TEF 294 ", 4060, 101]
+    var kmph = (elementai[2] * elementai[3]) / 3600;
+    var elementas1 = document.getElementById("a");
+    elementas1.innerHTML = (elementai[0]);
+    var elementas2 = document.getElementById("b")
+    elementas2.innerHTML = (elementai[1])
+    var elementas3 = document.getElementById("c")
+    elementas3.innerHTML = (kmph)
+</script>
+
+</html>
