@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>automobiliai 2</title>
+</head>
+
+<body>
+    <table border="7">
+        <thead>
+            <tr>
+                <td>data</td>
+                <td>automobilio numeriai</td>
+                <td>Laikas</td>
+                <td>Atstumas</td>
+                <td>greitis (km/val)</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        var auto = [
+            [" 2018 05 19 15:46:45 ", "TEF 294 ", 4060, 101],
+            [" 2016 05 19 15:46:45 ", "TEF 264 ", 4060, 102],
+            [" 2017 05 19 15:46:45 ", "TEF 546 ", 4060, 121]
+        ];
+        var tekstas = "";
+        for (i = 0; i < auto.length; i++) {
+            tekstas +=
+                '<tr>' +
+                '<td>' + auto[i][0] + '</td>' +
+                '<td>' + auto[i][1] + '</td>' +
+                '<td>' + auto[i][2] + '</td>' +
+                '<td>' + auto[i][3] + '</td>' +
+                '<td>' + Math.round(auto[i][2] / auto[i][3] * 3.6) + '</td>' +
+                '</tr>';
+        }
+        document.querySelector("tbody").innerHTML = tekstas;
+    </script >
+</body >
+</html >
