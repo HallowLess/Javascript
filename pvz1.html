@@ -5,72 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #target {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            border-radius: 0%;
+            transition: border-radius 0.8s ease
+        }
+
+        .circle {
+            border-radius: 50% !important;
+        }
+
+    </style>
 </head>
 
 <body>
-    <label>Data:</label>
-    <input id='data'>
-    <button onclick="add()">Pridėti</button>
-    <hr>
-    <table border="1">
-        <tr>
-            <td>
-                <div onclick="sort('data')"></div>
-            </td>>data</tr>div></td>
-        <td>numeris</td>
-        <td>laikas</td>
-        <td>atstumas</td>
-        <td>greitis</td>
-        </tr>
-    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <script>
-        var auto = [
-            { 'data': "2018-01-01", 'pavarde': 'Piotras', 'numeris': 'ABC123', 'atstumas': 5000, 'laikas': 110 },
-            { 'data': "2018-01-02", 'numeris': 'ABC124', 'atstumas': 5000, 'laikas': 103 },
-            { 'data': "2018-01-03", 'numeris': 'ABC125', 'atstumas': 5000, 'laikas': 125 },
-            { 'data': "2018-01-04", 'numeris': 'ABC126', 'atstumas': 5000, 'laikas': 131 },
-        ];
+    <div id="target"></div>
 
-        var sortOrder;
-        function sort(laukas) {
-            if (laukas = 'data') {
-                sortOrder = (a, b) => {
-                    return a.numeris < b.laukas ? -1 : a.laukas > b.laukas ? 1 : 0;
-                }
-            }
-        }
-
-        lentele();
-
-        function lentele() {
-            var lentele = '';
-            auto.sort((a, b) => {
-                // if(a.data < b.data) return -1
-                // else if (a.data > b.data) return 1;
-                // else return 0;
-                return a.data < b.data ? -1 : a.data > b.data ? 1 : 0;
-            });
-            auto.forEach(a => {
-                lentele +=
-                    '<tr>' +
-                    '<td>' + a.data + '</td>' +
-                    '<td>' + a.numeris + '</td>' +
-                    '<td>' + a.atstumas + '</td>' +
-                    '<td>' + a.laikas + '</td>' +
-                    '<td>' + (a['atstumas'] / a['laikas'] + 3.6).toFixed(0) + '</td>' +
-                    '</tr>';
-            });
-            document.getElementById('a').innerHTML = lentele;
-        }
-
-        function add() {
-            auto.push({ 'data': document.querySelector('#data').value });
-            lentele();
-
-            document.querySelector('#data')
-        }
-    </script>
+    <button>Transform!</button>
 </body>
 
 </html>
